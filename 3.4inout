@@ -1,0 +1,6 @@
+text = open("dataset_3363_3.txt", 'r')
+s = text.read().replace('\n', ' ').lower().split()
+text.close()
+
+s.sort()
+print(s)
