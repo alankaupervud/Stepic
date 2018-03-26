@@ -1,7 +1,11 @@
 #Решение с дополнительными способами проверки работы кода.
-text = open("dataset_3363_3.txt", 'r')
+"""text = open("dataset_3363_3.txt", 'r')
 s = text.read().replace('\n', ' ').lower().split()
-text.close()
+text.close()"""
+
+with open('dataset_3363_3.txt') as f:
+    # a = sum([i.strip().lower().split() for i in f], [])
+    s = f.read().lower().strip().split()
 
 s.sort()
 s.reverse()
