@@ -1,0 +1,19 @@
+text = open('slov.txt', 'w') 
+count =0
+mat = 0.0
+phis= 0.0
+RY=0.0
+with open ('dataset_3363_4.txt') as f:
+    a = f.readline()
+    while a and a.strip():
+        b = a.split(';')
+        mat+=int(b[1])
+        phis+=int(b[2])
+        RY += int(b[3])
+        text.write(str((int(b[1]) + int(b[2]) + int(b[3]))/3) + '\n')
+        a= f.readline()
+        count+=1
+text.write( (str(mat/count)+ ' '+ str(phis/count) +' ' + str(RY/count) ) )
+text.close()
+print('Done! Press any key for exit')
+input()
